@@ -1,7 +1,7 @@
 Feature: PC Feature
 
   @1
-  Scenario: Verify that user can category1 page
+  Scenario: Verify that user can open category1 page
     Given I open kicksterd
     When I select category "category1"
     Then I should see page url "http://localhost:8080/category/1.html"
