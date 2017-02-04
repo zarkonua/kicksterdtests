@@ -12,7 +12,7 @@ public class Home extends Page{
         open(URl);
     }
 
-    public WebElement getCategoty(String name){
+    public WebElement getLink(String name){
         return $("//a[contains(.,'%s')]",name);
     }
 }

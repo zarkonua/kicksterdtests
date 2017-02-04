@@ -16,8 +16,8 @@ public class HomeSteps extends Step {
     }
 
     @When("^I select category \"(.*?)\"$")
-    public void shoulSelectCategory(String cat) throws Throwable {
-        home.getCategoty(cat).click();
+    public void shouldSelectCategory(String cat) throws Throwable {
+        home.getLink(cat).click();
     }
 
 }

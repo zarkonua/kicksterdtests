@@ -3,6 +3,7 @@ package com.kicksterd.steps;
 import com.kicksterd.pages.Projects;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import org.openqa.selenium.WebElement;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -17,7 +18,7 @@ public class ProjectsSteps extends Step {
     Projects projects;
 
     @Then("I should see page url \"(.*?)\"$")
-    public void shouldCategoryPage(String url) {
+    public void shouldBeCategoryPage(String url) {
         assertThat(projects.getCurrentUrl(), equalTo(url));
     }
 
@@ -26,6 +27,11 @@ public class ProjectsSteps extends Step {
         List<String> expect = table.asList(String.class);
         List<WebElement> actual = projects.getSubItems();
         assertThat(actual.size(), equalTo(expect.size()));
+    }
+
+    @When("^I select project \"(.*?)\"$")
+    public void shoulSelectCategory(String pr) throws Throwable {
+        projects.getProject(pr).click();
     }
 
 }

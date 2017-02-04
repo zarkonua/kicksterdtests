@@ -20,4 +20,8 @@ public class Projects extends Page{
         return $$(By.cssSelector("body > div > table > tbody > * > td:nth-child(1)"));
     }
 
+    public WebElement getProject(String name){
+        return $("//a[contains(.,'%s')]",name);
+    }
+
 }
