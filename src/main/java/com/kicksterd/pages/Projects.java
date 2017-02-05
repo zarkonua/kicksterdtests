@@ -16,6 +16,10 @@ public class Projects extends Page{
         return URL;
     }
 
+    public void open() {
+        open(URL);
+    }
+
     public List<WebElement> getSubItems() {
         return $$(By.cssSelector("body > div > table > tbody > * > td:nth-child(1)"));
     }

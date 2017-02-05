@@ -1,4 +1,4 @@
-Feature: PC Feature
+Feature: Kicksterd Feature
 
   @1
   Scenario: Verify that user can open category1 page
@@ -27,3 +27,9 @@ Feature: PC Feature
     When I select register link
     When I enter my information
     Then I should be able to login
+
+  @5
+  Scenario: Verify that user can register
+    Given I open kicksterd
+    When Check if user login
+    Then I should be able to create new project

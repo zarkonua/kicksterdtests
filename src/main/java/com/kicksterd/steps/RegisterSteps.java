@@ -34,7 +34,7 @@ public class RegisterSteps extends Step {
     }
 
     @Then("I should be able to login")
-    public void shouldBeCategoryPage() throws InterruptedException {
+    public void shouldBeAbleToLogin() throws InterruptedException {
         login.fillInLoginForm(userName, password);
         assertThat(login.isMyAccountDisplayed(),  is(true));
     }
