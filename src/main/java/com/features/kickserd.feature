@@ -1,35 +1,13 @@
 Feature: Kicksterd Feature
 
   @1
-  Scenario: Verify that user can open category1 page
-    Given I open kicksterd
-    When I select category "category1"
-    Then I should see page url "http://localhost:8080/category/1.html"
+  Scenario: Verify that user can login
+    Given I open twitter
+    When I'm filling in login form
+    Then I should be logged in
 
   @2
-  Scenario: Verify that user can see projects
-    Given I open kicksterd
-    When I select category "category1"
-    Then verify that it has projects:
-      | project1 |
-      | project2 |
-
-  @3
-  Scenario: Verify that unregistered user can invest
-    Given I open kicksterd
-    When I select category "category1"
-    When I select project "project1"
-    Then verify that unregistered user can invest money "22"
-
-  @4
-  Scenario: Verify that user can register
-    Given I open kicksterd
-    When I select register link
-    When I enter my information
-    Then I should be able to login
-
-  @5
-  Scenario: Verify that user can register
-    Given I open kicksterd
-    When Check if user login
-    Then I should be able to create new project
+  Scenario: Verify that user can update status
+    Given I open twitter
+    When I select
+    Then I should see cat
